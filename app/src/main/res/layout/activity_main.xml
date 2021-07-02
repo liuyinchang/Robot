@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/royole_yole_text"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Yole卡通形象植入，清新拟人交互，打造全新Yole表情包和节日问候"
+        android:textSize="16dp"
+        android:lines="2"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/royole_yole"
+        android:layout_marginBottom="200dp"/>
+
+    <ImageView
+        android:id="@+id/royole_yole"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/royole_yole_start"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="动起来"
+        android:textSize="16dp"
+        android:layout_below="@+id/royole_yole"
+        android:layout_marginTop="200dp"
+        android:layout_toLeftOf="@+id/royole_yole"/>
+
+    <TextView
+        android:id="@+id/royole_yole_change"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="换个姿势"
+        android:textSize="16dp"
+        android:layout_below="@+id/royole_yole"
+        android:layout_marginTop="200dp"
+        android:layout_toRightOf="@+id/royole_yole"/>
+
+</RelativeLayout>

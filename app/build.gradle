@@ -1,0 +1,51 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    signingConfigs {
+        RoyolePlatformConfig {
+            keyAlias 'royole'
+            keyPassword 'royole_platform'
+            storeFile file('Royole_platform.jks')
+            storePassword 'royole_platform'
+        }
+    }
+
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.royole.yole"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 9102
+        versionName "9.1.02"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.RoyolePlatformConfig
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'classes.dex'
+        exclude '**.**'
+    }
+}
+
+dependencies {
+}
